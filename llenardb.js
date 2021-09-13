@@ -8,6 +8,7 @@ const Juego = require('./models/Juego');
 
 // la URI de la db
 const db = 'mongodb://localhost/proyectofinal';
+//const db = 'mongodb+srv://proyectoFinal:proyectoFinal@cluster0.eru4d.mongodb.net/proyectofinal?retryWrites=true&w=majority';
 
 // array de usuarios para ingresar a la db
 const juegos = [

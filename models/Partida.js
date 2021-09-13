@@ -10,12 +10,12 @@ const QuestionSchema = new Schema({
 });
 // PartidaSchema
 const PartidaSchema = new Schema({
-  id: number,
+  id: Number,
   juego: {
     type: Schema.Types.ObjectId,
     ref: 'Juego'
   },
-  cantJugadores: number
+  cantJugadores: Number
 });
 // model
 const Partida = mongoose.model('Partida', PartidaSchema);

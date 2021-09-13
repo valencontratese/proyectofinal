@@ -12,9 +12,6 @@ router
   .get(passport.authenticate('jwt', { session: false }), controller.all)
   .post(passport.authenticate('jwt', { session: false }), controller.create);
 
-router
-  .route('/api/puntajes/:user')
-  .get(passport.authenticate('jwt', { session: false }),
-       controller.userpuntajes);  
+ 
 // export
 module.exports = router;
