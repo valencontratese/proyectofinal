@@ -1,6 +1,6 @@
 {
   "name": "proyectofinal",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Proyecto final para la materia Proyecto Informático I.",
   "main": "index.js",
   "scripts": {
