@@ -14,7 +14,7 @@ const Login = props => {
   const handleSubmit = e => {
     e.preventDefault();
     // call API and get JWT
-    axios.post('/api/users/login', credentials)
+    axios.post('http://localhost:4000/api/users/login', credentials)
       .then(res => {
         localStorage.setItem('token', res.data.token);
         // blank form

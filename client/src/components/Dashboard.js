@@ -25,6 +25,7 @@ const Dashboard = props => {
       .catch(err => setUser(false));
 
   }, [setUser]);
+  /*
   // fetch data
   useEffect(() => {
     axios.get('/api/quizzes', {
@@ -35,7 +36,9 @@ const Dashboard = props => {
       .then(res => setQuizzes(res.data));
   }, []);
   // fetch scores for user
+  */
   const [userScores, setUserScores] = useState([]);
+  /*
   useEffect(() => {
     axios.get('/api/scores/' + user._id, {
       headers: {
@@ -44,7 +47,7 @@ const Dashboard = props => {
     })
       .then(res => setUserScores(res.data));
   }, [user._id]);
-
+*/
   // helpers
   const addQuiz = quiz => {
     axios.post('/api/quizzes', quiz, {

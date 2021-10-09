@@ -1,12 +1,10 @@
 {
   "name": "proyectofinal",
-  "version": "1.0.8",
+  "version": "1.0.7",
   "description": "ScoreBoard",
   "main": "index.js",
   "dependencies": {
-    "all": "0.0.0",
     "bcrypt": "^5.0.1",
-    "corps": "^0.1.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "mongoose": "^6.0.10",
@@ -30,10 +28,22 @@
   "keywords": [
     "Score"
   ],
-  "author": "Valentina Contartese y Lucia Aizcorbe",
+  "author": "Valentina y LUcia",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/valencontratese/proyectofinal/issues"
   },
-  "homepage": "https://github.com/valencontratese/proyectofinal#readme"
+  "homepage": "https://github.com/valencontratese/proyectofinal#readme",
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }

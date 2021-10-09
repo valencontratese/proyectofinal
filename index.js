@@ -6,23 +6,32 @@ const morgan   = require('morgan');
 const passport = require('passport');
 // config vars
 const PORT       = process.env.PORT       || 4000;
-const DB         = process.env.DB         || 'mongodb://localhost/proyectofinal';
+const DB         = process.env.DB         || 'mongodb://localhost:27017/proyectofinal';
 // app instance
 const app = express();
 const cors = require('cors');
 
+
+
 const corsOptions = {
-    origin: process.env.URL_FRONT,
+    origin: 'http://localhost:3000', //servidor que deseas que consuma o (*) en caso que sea acceso libre
+    credentials: true
   }
   
 // db connection
 mongoose.connect(DB, {
   useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useFindAndModify: false
+  useUnifiedTopology: true
 })
-  .then(() => console.log(`DB connected @ ${DB}`))
-  .catch(err => console.log(err));
+.then(x => {
+  console.log(
+    `Connected to Mongo! Database name: "${x.connections[0].name}"`
+  );
+})
+.catch(err => {
+  console.error("Error connecting to mongo", err);
+});
+ 
 // middleware
 app.use(morgan('dev'));
 app.use(express.json());
@@ -42,3 +51,5 @@ app.use('/', require('./routes/user'));
 app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`);
 });
+
+

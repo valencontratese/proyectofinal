@@ -3,11 +3,11 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 // UserSchema
-const UserSchema = new Schema({
-  username: String,
-  password: String,
+const UserSchema = new Schema({  
   firstName: String,
   lastName: String,
+  username: String,
+  password: String,
   role: {
     type: String,
     enum: ['student', 'teacher', 'admin'],
@@ -15,6 +15,6 @@ const UserSchema = new Schema({
   }
 });
 // model
-const User = mongoose.model('User', UserSchema);
+const User = mongoose.model('user', UserSchema);
 // export
 module.exports = User;

@@ -13,10 +13,10 @@ const db = 'mongodb://localhost/proyectofinal';
 // array de usuarios para ingresar a la db
 const juegos = [
   {
-    username: 'usuario',
-  password: '',
-  firstName: 'Nombre',
-  lastName: 'Apellido',
+  firstName: 'Nombre1',
+  lastName: 'Apellido1',
+  username: 'usuario1',
+  password: '1',
   role: 'admin'
   }
 ];
