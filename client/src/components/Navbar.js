@@ -14,8 +14,11 @@ const Navbar = props => {
   return (
     <div className="Navbar">
       <ul>
+      {user
+            ? ''
+            : <Link to="/register">Registrarse</Link>}
         <li>
-          <Link to="/register">Registrarse</Link>
+          
         </li>
         <li>
           {user
