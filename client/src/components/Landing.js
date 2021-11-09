@@ -2,16 +2,22 @@ import { Link } from 'react-router-dom';
 
 const Landing = props => (
   <div className="Landing">
-    <h1>ScoreBoard </h1>
-    <p>Tabla de puntos.</p>
+    
+    <div className="box">
     <center>
-    <Link className="primary" to="/register">Registrarse</Link>
-    <br></br>
-    <br></br>
-    <br></br>
+    <h1 className="titulo">Tabla de puntos</h1>
+    <div className="sub-box">  
     <Link to="/login">Ingresar</Link>
+    <br></br>
+    <br></br>
+    <br></br>
+    <Link className="primary" to="/register">Registrarse</Link>
+    </div>
     </center>
-  </div>
+    </div>
+  
+    </div>
+ 
 );
 
 export default Landing;

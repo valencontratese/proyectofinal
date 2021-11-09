@@ -1,6 +1,13 @@
+import forma from './Forma.png';
+
+
 const Footer = props => (
   <div className="Footer">
-    <h2>ScoreBoard</h2>
+
+    <center> 
+    <img src= {forma} className="forma" />
+    <p>SCORE BOARD™</p>
+    </center>
   </div>
 );
 

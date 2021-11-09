@@ -15,7 +15,10 @@
     "passport-jwt": "^4.0.0",
     "passport-local": "^1.0.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "concurrently": "^6.3.0",
+    "nodemon": "^2.0.14"
+  },
   "scripts": {
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "server": "nodemon index.js",

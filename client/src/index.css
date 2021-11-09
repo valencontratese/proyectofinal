@@ -1,397 +1,176 @@
-/* CRA default styles */
+:root{
+  --text-color-2:#909090;
+  --color-fondo:#222222;
 
-body {
+}
+
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-/* Global */
-
-a {
-  color: black;
+  padding: 0;
   text-decoration: none;
+
+  font-family: BebasRegular;
+}
+
+@font-face {
+  font-family: BebasRegular;
+  src: url(BebasNeueRegular.otf);
+
+}
+
+@font-face {
+  font-family: BebasBook;
+  src: url(BebasNeueBook.otf);
+
+}
+
+li > a {
+  color: white;
+}
+
+a{
+  color: #222222;
 }
 
 a:hover {
   text-decoration: underline;
 }
 
-button {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+
+.Header{
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  height: 130px;
+  background-color: var(--color-fondo);
+  box-shadow:   2px 2px 5px 2px #999;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  padding: 10px 5px;
-  margin: 0 auto;
+li {
+  list-style: none;
+}
+
+
+
+.links{
+  font-size: 20px;
+  margin: 20px;  
+  color: white;
+}
+
+
+
+.Landing{
+  padding-top: 100px;
+
+}
+
+.box{
   width: 300px;
+  height: 300px;
+  margin: auto;
+  background-color: #cdcdcd;
+  border-radius: 1px;
 }
 
-form > * {
-  margin: 5px 0;
+.titulo{
+  padding: 20px;
 }
 
-table, th, td {
-  border: 1px solid black;
+.sub-box{
+  margin-top: 50px;
+  font-size: 25px;
+}
+
+
+
+.primary{
+  width: 100px;
+  padding: 5px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-radius: 5px 5px 5px 5px;
+  background-color: #393939;
+  color: white;
+}
+
+.Footer{
+  margin-top: 200px;
+  height: 120px;
+  background-color: var(--color-fondo); 
+  color: white;
+  font-family: BebasBook;
+  font-size: 20px;
   padding: 10px;
+
 }
 
-table {
-  border-collapse: collapse;
-  margin: 20px;
+.forma{
+  width: 75px;
 }
 
-td > button {
-  margin: 0 10px;
-  font-size: 16px;
-  color: firebrick;
-  background: transparent;
-  border: 2px solid firebrick;
+
+/* REGISTRO */
+
+
+
+.Registro{
+  width: 300px;
+  height: 100%;
+  margin: 100px;
+  background-color: #dbdbdb;
+}
+
+.Titulos-Box{
+  padding: 30px;
+}
+
+input{ 
+  width: 200px;
+  margin: auto;
+
+}
+
+
+
+.boton{
+  width: 200px;
+  border-radius: 5px 5px 5px 5px;
+  background-color: #393939;
+  color: white;
+  border: none;
   outline: none;
-  border-radius: 5px;
-  padding: 5px 15px;
+  font-size: 30px;
+  margin: 40px;
+
 }
 
-td > button:hover {
-  text-decoration: underline;
+.sacar{
+  border: none;
+  outline: none;
 }
 
-h2 {
-  text-align: center;
-}
+/* INICIO DE SESION */
 
-/* Classes */
-
-.App {
-  min-width: 320px;
-  max-width: 1366px;
-  min-height: 500px;
-  margin: 5px auto;
-}
-
-.Header {
-  border: 1px solid black;
-  margin: 3px 3px;
-  display: flex;
-  justify-content: space-between;
+.Ingreso{
+  margin-top: 100px;
+  width: 300px;
+  height: 100%;
+  background-color: #dbdbdb;
   align-items: center;
 }
 
-.Header h3 {
-  margin-left: 10px;
-}
 
-.Header p {
-  color: firebrick;
-  padding: 0;
-  margin-left: 15px;
-}
+.input-box{
+  margin-top: 40px;
 
-.Navbar {
-  width: 50%;
-}
-
-.Navbar button {
-  background: transparent;
   border: none;
-  font-size: 16px;
-  padding: 0;
+  height: 25px;
+  font-size: 15px;
+  
 }
 
-.Navbar button:hover {
-  text-decoration: underline;
-}
-
-.Navbar ul {
-  list-style-type: none;
-  padding: 0;
-  display: flex;
-  justify-content: space-around;
-}
-
-@media screen and (max-width: 450px) {
-  .Navbar ul {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    margin-right: 10px;
-  }
-}
-
-.Main {
-  margin: 3px 3px;
-  min-height: 400px;
-}
-
-.Footer {
-  border: 1px solid black;
-  margin: 3px 3px;
-  text-align: center;
-}
-
-.Landing {
-  padding: 20px;
-  width: 90%;
-}
-
-.Landing a.primary {
-  margin-right: 5px;
-  border: 2px solid firebrick;
-  color: white;
-  background: firebrick;
-  border-radius: 5px;
-  padding: 5px 15px;
-}
-
-.Landing a {
-  margin-right: 5px;
-  border: 2px solid firebrick;
-  color: firebrick;
-  border-radius: 5px;
-  padding: 5px 15px;
-}
-
-.Landing a:hover {
-  opacity: 0.8;
-}
-
-.Register h1 {
-  text-align: center;
-}
-
-.Login h1 {
-  text-align: center;
-}
-
-.Register button, .Login button {
-  border: 2px solid firebrick;
-  font-size: 16px;
-  color: white;
-  background: firebrick;
-  border-radius: 5px;
-  padding: 5px 15px;
-}
-
-.Register button:hover, .Login button:hover {
-  opacity: 0.8;
-}
-
-.Dashboard {
-  display: flex;
-}
-
-@media screen and (max-width: 450px) {
-  .Dashboard {
-    display: flex;
-    flex-direction: column;
-  }
-}
-
-.Sidebar {
-  border: 1px solid black;
-  display: flex;
-  flex-direction: column;
-  margin: 5px;
-  padding: 10px;
-  text-align: left;
-}
-
-@media screen and (max-width: 450px) {
-  .Sidebar {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-}
-
-.Sidebar > * {
-  margin: 3px 0;
-}
-
-.Sidebar button {
-  text-align: left;
-  margin-right: 5px;
-  border: none;
-  color: firebrick;
-  border-radius: 5px;
-  font-size: 16px;
-  padding: 5px 15px;
-  background: transparent;
-  outline: none;
-}
-
-.Sidebar h4 {
-  color: gray;
-}
-
-.Sidebar h2 {
-  text-align: left;
-}
-
-.Sidebar button:hover {
-  text-decoration: underline;
-}
-
-.AddQuiz {
-  /* margin-left: 50px; */
-  margin: 0 auto;
-}
-
-.AddQuiz button.primary {
-  border: 2px solid firebrick;
-  font-size: 16px;
-  color: white;
-  background: firebrick;
-  border-radius: 5px;
-  padding: 5px 15px;
-}
-
-.AddQuiz button {
-  border: 2px solid firebrick;
-  font-size: 16px;
-  color: firebrick;
-  background: transparent;
-  border-radius: 5px;
-  padding: 5px 15px;
-}
-
-.AddQuiz button:hover {
-  text-decoration: underline;
-  opacity: 0.8;
-}
-
-.AddQuiz > form > * {
-  margin-top: 5px;
-}
-
-.Question {
-  display: flex;
-  flex-direction: column;
-}
-
-.Question > * {
-  margin-top: 5px;
-}
-
-.Answers {
-  display: flex;
-  flex-direction: column;
-}
-
-.AddQuiz p {
-  margin: 10px 0;
-}
-
-.Answers label {
-  margin-left: 5px;
-}
-
-.Profile {
-  padding: 20px;
-  min-width: 70%;
-  margin: 0 auto;
-}
-
-.Profile h2 {
-  text-align: left;
-}
-
-.Play {
-  margin: 0 auto;
-  min-width: 80%;
-}
-
-.QuizList {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: flex-start;
-  margin: 0 auto; /* no funciona, que onda? */
-
-}
-
-.QuizCard {
-  border: 1px solid gray;
-  box-shadow: 2px 2px gray;
-  margin: 5px;
-  padding: 15px 15px;
-  width: 250px;
-}
-
-.QuizCard button {
-  border: 2px solid firebrick;
-  font-size: 16px;
-  color: white;
-  background: firebrick;
-  border-radius: 5px;
-  padding: 5px 15px;
-}
-
-.QuizCard button:hover {
-  text-decoration: underline;
-  opacity: 0.8;
-}
-
-.QuizQuestion p {
-  border: 1px solid black;
-  width: 80%;
-  margin: 5px auto;
-  text-align: center;
-  padding: 10px 0;
-  box-shadow: 2px 2px gray;
-}
-
-.QuizQuestion form {
-  width: 80%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.QuizQuestion > form > button {
-  border: 1px solid black;
-  width: 45%;
-  margin: 10px 0;
-  padding: 20px;
-  color: white;
-  font-size: 20px;
-  box-shadow: 2px 2px gray;
-  background: firebrick;
-  outline: none;
-}
-
-.QuizQuestion > form > button:hover {
-  opacity: 0.8;
-}
-
-.QuizFinished {
-  border: 1px solid black;
-  padding: 20px;
-}
-
-.QuizFinished > p {
-  font-size: 20px;
-}
-
-.QuizFinished > a {
-  font-size: 20px;
-}
-
-.Quiz {
-  text-align: center;
+.cartas{
+  width: 100px;
 }

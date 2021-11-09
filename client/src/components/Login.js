@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import axios from 'axios';
 
+import cartas from './poker.png';
+
 const Login = props => {
   // hooks
   const history = useHistory();
@@ -33,24 +35,37 @@ const Login = props => {
   // render
   return (
     <div className="Login">
-      <h1>Ingresar</h1>
-      <form onSubmit={handleSubmit}>
-        <label>Usuario</label>
+      
+      <center>
+      <form onSubmit={handleSubmit} className="Ingreso">
+        <center>
+        <img src={cartas} className="cartas"/>
+
+        
+        <h1>Inicio de Sesion</h1>
+        
+
         <input
           type="text"
           name="username"
           value={username}
           onChange={handleChange}
-        />
-        <label>Contraseña</label>
+          className="input-box"
+          placeholder=" Usuario"
+          />
         <input
           type="password"
           name="password"
           value={password}
           onChange={handleChange}
+          className="input-box"
+          placeholder=" Contraseña"
         />
-        <button type="submit">Ingresar</button>
+        
+        <button type="submit" className="boton">Ingresar</button>
+        </center>
       </form>
+      </center>
     </div>
   );
 };
